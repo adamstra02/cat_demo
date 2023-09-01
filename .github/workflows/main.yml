@@ -1,11 +1,12 @@
 name: Whatever
 on: push
-env:
-  # Setting an environment variable with the value of a configuration variable
-  AERO_STRING_PROD: ${{ vars.AERO_STRING_PROD }}
+# env:
+#   # Setting an environment variable with the value of a configuration variable
+#   AERO_STRING_PROD: ${{ vars.AERO_STRING_PROD }}
 jobs:
-  build:
+  deployment:
     runs-on: windows-latest
+    environment: dev
     steps:
       - name: checkout
         uses: actions/checkout@v3
