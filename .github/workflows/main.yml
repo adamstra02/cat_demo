@@ -1,5 +1,8 @@
 name: Whatever
 on: push
+permissions:
+  checks: write
+  pull-requests: write
 jobs:
   deployment:
     runs-on: windows-latest
@@ -19,11 +22,9 @@ jobs:
       
           Invoke-CatProject
           
-      - name: Test Report
-        uses: dorny/test-reporter@v1
+      - name: Publish Test Results
+        uses: EnricoMi/publish-unit-test-result-action/composite@v2
         if: always()
         with:
-          name: DotNET Tests
-          path: "**/*.trx"                            
-          reporter: dotnet-trx
-          fail-on-error: true
+          files: |
+            **/*.trx
