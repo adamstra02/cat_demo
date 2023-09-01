@@ -2,7 +2,7 @@ name: Whatever
 on: push
 env:
   # Setting an environment variable with the value of a configuration variable
-  AERO_STRING_PROD: ${{ env.AERO_STRING_PROD }}
+  AERO_STRING_PROD: ${{ vars.AERO_STRING_PROD }}
 jobs:
   build:
     runs-on: windows-latest
