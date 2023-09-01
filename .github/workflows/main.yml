@@ -13,7 +13,7 @@ jobs:
       - name: run cat
         shell: pwsh
         run: |
-          $env:AERO_STRING_PROD = ${{var.AERO_STRING_PROD}}
+          $env:AERO_STRING_PROD = ${{vars.AERO_STRING_PROD}}
           
           dir env:
         
