@@ -2,7 +2,7 @@ name: Whatever
 on: push
 env:
   # Setting an environment variable with the value of a configuration variable
-  env_var: ${{ vars.AERO_STRING_PROD }}
+  connection_string: ${{ vars.AERO_STRING_PROD }}
 jobs:
   build:
     runs-on: windows-latest
@@ -12,6 +12,8 @@ jobs:
       - name: run cat
         shell: pwsh
         run: |
+          $env:AERO_STRING_PROD = $connection_string
+          
           dir env:
           
           #Install-Module CAT -Force -AcceptLicense
