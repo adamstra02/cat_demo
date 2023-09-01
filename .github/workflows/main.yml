@@ -12,8 +12,10 @@ jobs:
       - name: run cat
         shell: pwsh
         run: |
-          Install-Module CAT -Force -AcceptLicense
+          dir env:
+          
+          #Install-Module CAT -Force -AcceptLicense
       
-          Import-Module CAT
+          #Import-Module CAT
       
-          Invoke-CatProject
+          #Invoke-CatProject
