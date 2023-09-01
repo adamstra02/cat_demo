@@ -1,8 +1,5 @@
 name: Whatever
 on: push
-# env:
-#   # Setting an environment variable with the value of a configuration variable
-#   AERO_STRING_PROD: ${{ vars.AERO_STRING_PROD }}
 jobs:
   deployment:
     runs-on: windows-latest
@@ -15,12 +12,12 @@ jobs:
         env:
           AERO_STRING_PROD: ${{ secrets.AERO_STRING_PROD }}
         run: |
-          # dir 
+          dir 
 
-          # dir env:
+          dir env:
           
-          Install-Module CAT -Force -AcceptLicense
+          # Install-Module CAT -Force -AcceptLicense
       
-          Import-Module CAT
+          # Import-Module CAT
       
-          Invoke-CatProject
+          # Invoke-CatProject
