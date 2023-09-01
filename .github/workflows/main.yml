@@ -13,12 +13,12 @@ jobs:
       - name: run cat
         shell: pwsh
         run: |
-          $env:AERO_STRING_PROD = ${{vars.AERO_STRING_PROD}}
+          $env:AERO_STRING_PROD = ${{ vars.AERO_STRING_PROD }}
           
           dir env:
         
-          #Install-Module CAT -Force -AcceptLicense
+          Install-Module CAT -Force -AcceptLicense
       
-          #Import-Module CAT
+          Import-Module CAT
       
-          #Invoke-CatProject
+          Invoke-CatProject
