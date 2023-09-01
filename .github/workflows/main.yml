@@ -12,12 +12,15 @@ jobs:
         env:
           AERO_STRING_PROD: ${{ secrets.AERO_STRING_PROD }}
         run: |
-          # dir 
-
-          # dir env:
           
           Install-Module CAT -Force -AcceptLicense
       
           Import-Module CAT
       
           Invoke-CatProject
+      - name: Publish Test Results
+        uses: EnricoMi/publish-unit-test-result-action/composite@v2
+        if: always()
+        with:
+          files: |
+            **/*.trx
