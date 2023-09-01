@@ -15,12 +15,12 @@ jobs:
         env:
           AERO_STRING_PROD: ${{ secrets.AERO_STRING_PROD }}
         run: |
-          dir 
+          # dir 
 
-          dir env:
+          # dir env:
           
-          # Install-Module CAT -Force -AcceptLicense
+          Install-Module CAT -Force -AcceptLicense
       
-          # Import-Module CAT
+          Import-Module CAT
       
-          # Invoke-CatProject
+          Invoke-CatProject
