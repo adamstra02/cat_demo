@@ -10,13 +10,11 @@ jobs:
       - name: run cat
         shell: pwsh
         env:
-          AERO_STRING_PROD: ${{ vars.AERO_STRING_PROD }}
+          AERO_STRING_PROD: ${{ secrets.AERO_STRING_PROD }}
         run: |
           # dir 
 
           # dir env:
-
-          $env:AERO_STRING_PROD
           
           Install-Module CAT -Force -AcceptLicense
       
