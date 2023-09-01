@@ -1,5 +1,5 @@
 name: How to use a Windows Runner on GitHub Actions
-on: [push]
+on: push
 jobs:
   build:
     runs-on: windows-latest
