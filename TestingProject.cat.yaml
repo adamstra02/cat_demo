@@ -1,6 +1,6 @@
 ﻿Data Sources:
 - Provider: SqlServer@1 
-  Connection string: AERO_STRING_PROD
+  Connection string: "AERO_STRING_PROD"
   Name: AERO_PROD
 
 Get list of tests from:
