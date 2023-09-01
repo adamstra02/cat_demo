@@ -1,0 +1,10 @@
+name: How to use a Windows Runner on GitHub Actions
+on: [push]
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Check out repo        
+        shell: pwsh
+      - run: |
+          dir
