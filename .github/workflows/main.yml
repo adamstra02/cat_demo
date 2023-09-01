@@ -12,7 +12,7 @@ jobs:
       - name: run cat
         shell: pwsh
         run: |
-          $env:AERO_STRING_PROD = $connection_string
+          $env:AERO_STRING_PROD = $env:connection_string
           
           dir env:
           
