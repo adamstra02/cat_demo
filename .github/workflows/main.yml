@@ -1,4 +1,4 @@
-name: How to use a Windows Runner on GitHub Actions
+name: Whatever
 on: push
 env:
   # Setting an environment variable with the value of a configuration variable
