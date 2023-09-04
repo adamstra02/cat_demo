@@ -27,4 +27,4 @@ jobs:
         if: always()
         with:
           files: |
-            **/*.trx
+            **/*.trx 
